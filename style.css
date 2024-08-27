@@ -1,0 +1,50 @@
+/* body{
+    display:flex;
+    justify-content: center;
+     */
+.gallery{
+    display: flex;
+    justify-content: center;
+}
+.Container {
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1.25rem;
+    transition: all 400ms;
+}
+.card {
+    width: 200px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+.card {
+    flex: 1;
+    height: 100%;
+    transition: all 400ms;
+    cursor: pointer;
+}
+
+.card:nth-child(odd) {
+    transform: translateY(0);
+}
+
+.card:nth-child(even) {
+    transform: translateY(0);
+}
+
+.Container:hover > .card:not(:hover) {
+    filter: grayscale(100%);
+}
+
+.card:hover {
+    flex: 3;
+    transform: translateY(-10px); /* Optional for slight lift effect */
+}
